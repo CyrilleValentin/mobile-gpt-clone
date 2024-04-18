@@ -7,11 +7,14 @@ Widget myInput({
   required TextEditingController controller,
   String? Function(String?)? validator,
   void Function(String?)? onSaved,
+  void Function()? onEditingComplete,
+   void Function(String)? onChanged,
 }) {
   return TextFormField(
+  onChanged: onChanged,
     controller: controller,
     obscureText: obscureText,
-    style: TextStyle(fontSize: 10.5),
+    style: const TextStyle(fontSize: 11),
     decoration: InputDecoration(
       hintText: hintText,
       suffixIcon: suffixIcon,
@@ -23,7 +26,7 @@ Widget myInput({
       fillColor: Colors.grey[150],
       errorStyle: const TextStyle(
         color: Colors.red,
-        fontSize: 10.5,
+        fontSize: 11,
       ),
       errorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(30),

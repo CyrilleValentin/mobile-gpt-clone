@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_ai/onBoarding/onBoard.dart';
 import 'package:my_ai/pages/chat.dart';
 import 'package:my_ai/route/navigator.dart';
 
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 181, 244, 233)),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'My AI Chat App'),
+     // home: const MyHomePage(title: 'My AI Chat App'),
+      home: Onboarding(),
     );
   }
 }
